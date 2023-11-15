@@ -1,0 +1,3 @@
+import monkey as m
+m.banana("add")
+m.oohoohahah(m.b)
