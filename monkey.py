@@ -56,7 +56,8 @@ def math(n1, func, n2):
     ooaa("Error 3: Invalid Math Function")
 
 # If-else
-def ifelse(value, condition, ifcmd, ifsub, elsecmd, elsesub)
+def ifelse(value, condition, ifcmd, ifsub, elsecmd, elsesub):
+  global b
   if condition == "=" or condition == "==" or condition == "equal":
     if b == value:
       if ifcmd == "ooaa":
@@ -72,3 +73,35 @@ def ifelse(value, condition, ifcmd, ifsub, elsecmd, elsesub)
         banana(elsesub)
       else:
         ooaa("Error 4: Invalid Ifelse Function Provided")
+  elif condition == ">" or condition == "greater" or condition == "morethan" or condition == "more than":
+    if b > value:
+      if ifcmd == "ooaa":
+        ooaa(ifsub)
+      elif ifcmd == "banana":
+        banana(ifsub)
+      else:
+        ooaa("Error 4: Invalid Ifelse Function Provided")
+    else:
+      if elsecmd == "ooaa":
+        ooaa(elsesub)
+      elif elsecmd == "banana":
+        banana(elsesub)
+      else:
+        ooaa("Error 4: Invalid Ifelse Function Provided")
+  elif condition == "<" or condition == "less" or condition == "lessthan" or condition == "less than":
+    if b < value:
+      if ifcmd == "ooaa":
+        ooaa(ifsub)
+      elif ifcmd == "banana":
+        banana(ifsub)
+      else:
+        ooaa("Error 4: Invalid Ifelse Function Provided")
+    else:
+      if elsecmd == "ooaa":
+        ooaa(elsesub)
+      elif elsecmd == "banana":
+        banana(elsesub)
+      else:
+        ooaa("Error 4: Invalid Ifelse Function Provided")
+  else:
+    ooaa("Error 5: Invalid Ifelse Condition Provided")                              

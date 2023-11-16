@@ -1,3 +1,0 @@
-import monkey as mky
-mky.banana("add")
-mky.oohoohahah(mky.b)
