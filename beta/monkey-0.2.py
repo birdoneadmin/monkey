@@ -1,9 +1,37 @@
 # MONKEY PROGRAMMING LANGUAGE
-# Version 0.1.0
+# Version 0.2.0
 
 # Initialize
 b = 0
 import random
+allowprint = False
+
+def restricted_print(*args, **kwargs):
+    if allow_print:
+        print(*args, **kwargs)
+    else:
+        raise ValueError("Error 6: Invalid Function")
+
+print = restricted_print
+
+
+# monkey.py
+allow_print = False
+
+def ooaa(x):
+    global allow_print
+    allow_print = True
+    print(x)
+    allow_print = False
+
+def mkyprint(*args, **kwargs):
+    if allow_print:
+        print(*args, **kwargs)
+    else:
+        raise ValueError("Error 6: Invalid Function. Use ooaa() or oohoohahah() instead.")
+
+print = mkyprint
+
 
 # Print Commands
 def oohoohahah(text):
@@ -37,7 +65,7 @@ def monkey(command, subcommand, times):
         for i in range(times):
             banana(subcommand)
     else:
-        ooaa("Error 2: Invalid Monkey Function Provided")
+        ooaa("Error 2: Invalid Monkey Loop Function Provided")
 
 
 # Concatenation

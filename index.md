@@ -1,6 +1,6 @@
 # Monkey Programming Language Documentation
 
-Monkey is a simple programming language designed for basic operations. It includes functions for printing, looping, string concatenation, arithmetic operations, conditional statements, random number generation, and a unique 'banana' operation.
+Monkey is a simple programming language designed for basic operations. It includes functions for printing, looping, string concatenation, arithmetic operations, conditional statements, random number generation, and banana operations.
 
 # Functions
 
@@ -37,3 +37,11 @@ Monkey is a simple programming language designed for basic operations. It includ
 ## Comments
 
 - `comment()`: Write a comment to annotate your code.
+
+**Monkey is still in the very early stages of development, and more features are set to come.**
+
+# Installation
+To install Monkey, first install Python 3.9 or later.\
+Then, create a folder for all your monkey code. Then, copy the `monkey.py` file and paste it into your folder.\
+Start a Monkey file by creating a document and name it with the extension `.mky`.
+Add this code to the first line: `from monkey `
