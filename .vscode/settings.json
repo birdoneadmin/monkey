@@ -1,10 +1,4 @@
 {
-    "[mky]": {
-        "files.associations": {
-            "*.mky": "mky"
-        },
-        "editor.fontFamily": "Comic Sans MS"
-    },
     "[python]": {
         "editor.defaultFormatter": "ms-python.python",
         "python.linting.flake8Enabled": false

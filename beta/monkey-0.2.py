@@ -1,29 +1,17 @@
-# MONKEY PROGRAMMING LANGUAGE
-# Version 0.2.0
+#######################################
+#     MONKEY PROGRAMMING LANGUAGE     #
+#           Version 0.2.0             #
+#######################################
+
+# ----------------------------------------------------- #
 
 # Initialize
 b = 0
 import random
-allowprint = False
 
-def restricted_print(*args, **kwargs):
-    if allow_print:
-        print(*args, **kwargs)
-    else:
-        raise ValueError("Error 6: Invalid Function")
+# ----------------------------------------------------- #
 
-print = restricted_print
-
-
-# monkey.py
-allow_print = False
-
-def ooaa(x):
-    global allow_print
-    allow_print = True
-    print(x)
-    allow_print = False
-
+# Block Outside Commands
 def mkyprint(*args, **kwargs):
     if allow_print:
         print(*args, **kwargs)
@@ -32,18 +20,24 @@ def mkyprint(*args, **kwargs):
 
 print = mkyprint
 
+def get_b():
+    return b
+
+# ----------------------------------------------------- #
 
 # Print Commands
-def oohoohahah(text):
-    if isinstance(text, str):
-        print(text)
-    else:
-        print(str(text))
+allow_print = False
 
+def oohoohahah(text):
+    global allow_print
+    allow_print = True
+    print(text)
+    allow_print = False
 
 def ooaa(text):
     oohoohahah(text)
 
+# ----------------------------------------------------- #
 
 # Bananas
 def banana(action):
@@ -55,6 +49,7 @@ def banana(action):
     else:
         ooaa("Error 1: Invalid Banana Function")
 
+# ----------------------------------------------------- #
 
 # Loops
 def monkey(command, subcommand, times):
@@ -67,6 +62,7 @@ def monkey(command, subcommand, times):
     else:
         ooaa("Error 2: Invalid Monkey Loop Function Provided")
 
+# ----------------------------------------------------- #
 
 # Concatenation
 def double(text):
@@ -75,6 +71,7 @@ def double(text):
     else:
         return str(text) + str(text)
 
+# ----------------------------------------------------- #
 
 # Math
 def math(n1, func, n2):
@@ -89,6 +86,7 @@ def math(n1, func, n2):
     else:
         ooaa("Error 3: Invalid Math Function")
 
+# ----------------------------------------------------- #
 
 # If-else
 def ifelse(value, condition, ifcmd, ifsub, elsecmd, elsesub):
@@ -151,16 +149,19 @@ def ifelse(value, condition, ifcmd, ifsub, elsecmd, elsesub):
     else:
         ooaa("Error 5: Invalid Ifelse Condition Provided")
 
+# ----------------------------------------------------- #
 
 # Random Number Generation
 def random(min, max):
     return random.randint(min, max)
 
-
 def randomrandom(min, max):
     return random.randint(random.randint(min, max), random.randint(min, max))
+
+# ----------------------------------------------------- #
 
 # Comments
 def comment():
     pass
 
+# ----------------------------------------------------- #
