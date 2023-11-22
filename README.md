@@ -1,6 +1,6 @@
 # Monkey Programming Language
 
-![GitHub release (with filter)](https://img.shields.io/github/v/release/:birdoneadmin/:monkey)
+![Current Version](https://img.shields.io/github/v/release/birdoneadmin/monkey?include_prereleases&label="Latest%20Version")
 
 Monkey is a simple programming language designed for basic operations. It includes functions for printing, looping, string concatenation, arithmetic operations, conditional statements, random number generation, and banana operations.
 
@@ -40,11 +40,19 @@ Monkey is a simple programming language designed for basic operations. It includ
 
 - `comment()`: Write a comment to annotate your code.
 
+## Print Exten
+
+- `EnablePrintExten()` and `DisablePrintExten()` enables and disables the Print Exten system, allowing you to output more info.
+
 **Monkey is still in the very early stages of development, and more features are set to come.**
 
 # Installation
 To install Monkey, first install Python 3.9 or later.\
 Then, create a folder for all your monkey code. Then, copy the `monkey.py` file and paste it into your folder.\
 Start a Monkey file by creating a document and name it with the extension `.mky`.\
-Add this code to the first line: `import monkey as m`.\
-and add a `m.` prefix to every command.
+To initialize, add the following code to the top of the file:\
+```
+import monkey as m
+b = m.getb()
+```
+Don't forget to add `m.` as a prefix to every command.\
