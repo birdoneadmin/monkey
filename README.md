@@ -1,6 +1,6 @@
 # Monkey Programming Language
 
-![Current Version](https://img.shields.io/github/v/release/birdoneadmin/monkey?include_prereleases&label="Latest%20Version")
+![Current Version](https://img.shields.io/github/v/release/birdoneadmin/monkey?include_prereleases&label=Latest%20Version)
 
 Monkey is a simple programming language designed for basic operations. It includes functions for printing, looping, string concatenation, arithmetic operations, conditional statements, random number generation, and banana operations.
 
