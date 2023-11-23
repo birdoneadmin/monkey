@@ -213,7 +213,7 @@ def who():
 def whn(text):
     global pextext
     pextext = 1
-    ooaaa("da"+capitalize(text))
+    ooaaa("da"+text.upper())
     pextext = 0
 
 # ----------------------------------------------------- #
