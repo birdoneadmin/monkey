@@ -1,6 +1,6 @@
 #########################################
 ###### MONKEY PROGRAMMING LANGUAGE ######
-############ Version 0.2.0 ##############
+############ Version 0.2.1 ##############
 #########################################
 
 # ----------------------------------------------------- #
@@ -119,7 +119,9 @@ def math(n1, func, n2):
     elif func == "divide" or func == "/":
         return n1 / n2
     else:
-        pextext=1; ooaaa("Error 3: Invalid Math Function"); pextext=0
+        pextext = 1
+        ooaaa("Error 3: Invalid Math Function")
+        pextext = 0
 
 # ----------------------------------------------------- #
 
@@ -206,6 +208,12 @@ def who():
     global pextext
     pextext = 1
     ooaaa("da")
+    pextext = 0
+
+def whn(text):
+    global pextext
+    pextext = 1
+    ooaaa("da"+capitalize(text))
     pextext = 0
 
 # ----------------------------------------------------- #
