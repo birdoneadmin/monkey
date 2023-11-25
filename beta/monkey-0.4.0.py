@@ -1,19 +1,28 @@
 #########################################
 ###### MONKEY PROGRAMMING LANGUAGE ######
-############ Version 0.3.0 ##############
+############ Version 0.4.0 ##############
 #########################################
 
 # ----------------------------------------------------- #
 
 # Initialize
+
 b = 0
 pext = 0
 pextext = 0
 printok = False
+
 import random
 import sys
 from time import sleep
 
+version = "0.4.0"
+
+# ----------------------------------------------------- #
+
+# Message
+
+print("Monkey "+version+"\n")
 # ----------------------------------------------------- #
 
 # Modifications
@@ -23,7 +32,8 @@ def getb():
 
 # ----------------------------------------------------- #
 
-# Print Extension
+# PrintExten  Extension
+
 def EnablePrintExt():
     global pext
     pext = 1
@@ -31,8 +41,8 @@ def EnablePrintExt():
 def DisablePrintExt():
     global pext
     pext = 0
-    
-def PrintExt():
+
+def PrintExten():
     print("")
     sleep(0.5)
     print(".----. .----. -.- |\\   | --.--")
@@ -49,23 +59,25 @@ def PrintExt():
     print("|---- /   \\   |   |---- |    |")
     print("")
     sleep(0.2)
+    print("[!] PrintExten will soon move to its own downloadable extension, inside the Monkey repo.")
+    print("")
+    sleep(0.2)
     print("PrintExten")
-    print("Official Print Extension for Monkey 0.3.0")
+    print("Official Print Extension for Monkey 0.3.0 and up")
     print("")
     print("Choose what you want to do:")
-    print("1. Enable Print Exten")
-    print("2. Disable Print Exten")
+    print("1. Enable PrintExten")
+    print("2. Disable PrintExten")
     print("3. Leave a Review")
-    print("4. Exit")
+    print("4. About")
+    print("5. Exit")
     print("")
     pxchoice = input("... ")
     
     if pxchoice == "1":
         EnablePrintExt()
-        return
     elif pxchoice == "2":
         DisablePrintExt()
-        return
     elif pxchoice == "3":
         pxreview = input("\nType your review... (No more than 128 characters)\n... ")
         if len(pxreview) > 128:
@@ -88,15 +100,23 @@ def PrintExt():
                 sleep(1)
             PrintExt()
     elif pxchoice == "4":
+        print("Coming Soon")
+    elif pxchoice == "5":
         pxconf = input("Confirm Exit? (y/n)")
         if pxconf == "y":
             return
         else:
-            PrintExt()
+            PrintExten()
+    else:
+        print("Invalid C")
+            
+def PrintExt():
+    PrintExten()
     
 # ----------------------------------------------------- #
 
 # Print Commands
+
 allow_print = False
 
 def oohoohahah(text):
@@ -110,7 +130,7 @@ def oohoohahah(text):
         if text != "":
             pextext = 1
             sleep(0.5)
-            print("Error 8: Enable Print Exten first to output text.")
+            print("Error 8: Enable PrintExten first to output text.")
             pextext = 0
     allow_print = False
 
@@ -130,6 +150,7 @@ def ooaaa(text):
 # ----------------------------------------------------- #
 
 # Bananas
+
 def banana(action):
     global b,pextext
     if action == "add":
@@ -144,7 +165,8 @@ def banana(action):
 # ----------------------------------------------------- #
 
 # Loops
-def monkey(command, subcommand, times):
+
+def mkloop(command, subcommand, times):
     global pextext
     if command == "ooaa":
         for i in range(times):
@@ -160,6 +182,7 @@ def monkey(command, subcommand, times):
 # ----------------------------------------------------- #
 
 # Concatenation
+
 def double(text):
     if isinstance(text, str):
         return text + text
@@ -169,6 +192,7 @@ def double(text):
 # ----------------------------------------------------- #
 
 # Math
+
 def math(n1, func, n2):
     global pextext
     if func == "add" or func == "+":
@@ -187,6 +211,7 @@ def math(n1, func, n2):
 # ----------------------------------------------------- #
 
 # If-else
+
 def ifelse(value, condition, ifcmd, ifsub, elsecmd, elsesub):
     global b,pextext
     if condition == "=" or condition == "==" or condition == "equal":
@@ -250,6 +275,7 @@ def ifelse(value, condition, ifcmd, ifsub, elsecmd, elsesub):
 # ----------------------------------------------------- #
 
 # Random Number Generation
+
 def random(min, max):
     return random.randint(min, max)
 
@@ -259,12 +285,14 @@ def randomrandom(min, max):
 # ----------------------------------------------------- #
 
 # Comments
+
 def comment():
     pass
 
 # ----------------------------------------------------- #
 
 # Who Test Function
+
 def who():
     global pextext
     pextext = 1
@@ -274,7 +302,68 @@ def who():
 def whn(text):
     global pextext
     pextext = 1
-    ooaa("da"+text.upper())
+    ooaa("da"+capitalize(text))
     pextext = 0
 
+# ----------------------------------------------------- #
+
+# True/False
+
+def truefalse(n1, func, n2):
+    if func == "=":
+        if (n1 == "1" and n2 == "0") or (n2 == "0" and n1 == "1"):
+            return "Maybe"
+        else:
+            return n1 == n2
+            
+    if func == ">": return n1 > n2
+    if func == "<": return n1 < n2
+    if func == "!=" or func == "≠": return n1 != n2
+    if func == "!>" or func == "<=": return n1 <= n2a
+    if func == "!<" or func == ">=": return n1 >= n2
+    if func == "!!=": return "Maybe"
+    if func == "!!!=": return False
+    
+# ----------------------------------------------------- #
+
+# Sys Extension
+
+def sys():
+    print("")
+    print("Sys Extension")
+    sleep(0.2)
+    print("")
+    print("Official System Extension for Monkey 0.4.0 and up")
+    print("")
+    print("Select a function")
+    print("1. Read Important Updates")
+    print("2. Read Other Articles")
+    print("3. Install Extensions")
+    print("4. Try Monkey Beta")
+    print("5. Exit")
+    print("")
+    syschoice = input("... ")
+    print("")
+    sleep(0.5)
+    if syschoice == "1":
+        print("[!] IMPORTANT UPDATE\nMonkey extensions will be moved to a seperate version instead of being in the file itself. It will be downloadable through the Monkey repo and available for free.")
+        input("\nPress enter to go to Home Screen.")
+        print("\nGoing to Home Screen in 3 seconds...\n")
+        sleep(3);sys()
+    if syschoice == "2":
+        print("No other articles at the moment. Going back to Home Screen in 3 seconds...\n")
+        sleep(3);sys()
+    if syschoice == "3":
+        print("Extensions are not installable through Sys at the moment. Going back to Home Screen in 3 seconds...\n")
+        sleep(3);sys()
+    if syschoice == "4":
+        print("Monkey Beta Testing is not open at the moment. Going back to Home Screen in 3 seconds...\n")
+        sleep(3);sys()
+    if syschoice == "5":
+        sysexit = ("Are you sure you want to exit? (y/n)")
+        if sysexit == "y":
+            return
+        else:
+            sys()
+            
 # ----------------------------------------------------- #
